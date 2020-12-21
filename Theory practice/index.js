@@ -15,7 +15,7 @@ title.innerHTML = "Hi From JS";
 /*네 페이지에서 자바스크립트로 선택한 것은
 객체가 되는 거지. 이 title 안에 또 뭐가 있을까?*/
 //console.dir(title);
-title.style.color = "red";
+//title.style.color = "red";
 //onsole.dir(document);
 document.title = "Change Title";
 
@@ -32,9 +32,27 @@ function handleResize(){
 handleResize 라고 적으면 사이즈가 변경될때 실행*/
 window.addEventListener("resize", handleResize);
 
+
 /*title을 클릭할때 이벤트를 부여해볼까
 클릭하면 색깔이 바뀌는 거야 */
+const BASE_COLOR = "cornflowerblue";
+const OTHER_COLOR = "coral";
 function handelClick(){
-    title.style.color = "blue";
+    const currentColor = title.style.color;
+    if(currentColor === BASE_COLOR) {
+        title.style.color = OTHER_COLOR;
+    } else {
+        title.style.color = BASE_COLOR;
+    }
 }
-title.addEventListener("click", handelClick);
+function init(){
+    title.style.color = BASE_COLOR;
+    title.addEventListener("click", handelClick);
+}
+init();
+
+//javascript dom event mdn 같이 구글링. 
+function handleOffline() {
+    console.log("This is Off");
+}
+window.addEventListener("offline", handleOffline);
