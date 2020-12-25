@@ -2,24 +2,23 @@ body {
     background-color: #ffeaa7;
   }
   
-  h1 {
-    color :#e84393;
-    transition: color 0.5s ease-in-out;
-  }
+body {
+  color :#e84393;
+}
   
-  .clicked {
-    color: #a29bfe;
-  }
+.clicked {
+  color: #a29bfe;
+}
   
-  .btn {
-    cursor: pointer;
-  }
+.btn {
+  cursor: pointer;
+}
 
-  .form,
-  .greetings {
-    display: none;
-  }
+.form,
+.greetings {
+  display: none;
+}
 
-  .showing {
-    display: block;
-  }
+.showing {
+  display: block;
+}
